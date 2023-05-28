@@ -1,0 +1,13 @@
+apply plugin: "java-library"
+apply plugin: "kotlin"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+
+    testImplementation project(":common-test")
+}
